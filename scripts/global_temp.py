@@ -28,6 +28,15 @@ df_temp["global_temp_c"] = df_temp["anomaly_c"] + BASELINE_TEMP_C
 # Keep only necessary columns
 df_temp = df_temp[["year", "anomaly_c", "global_temp_c"]]
 
+# Save the final dataset
+output_path = BASE_DIR / "data" / "processed" / "global_temp_data.csv"
+df_temp.to_csv(output_path, index=False)
+
+print("Global Temperature dataset shape:", df_temp.shape)
+print(df_temp[["year", "global_temp_c"]].drop_duplicates().head())
+
+
+'''
 # Merge temperature with EI data (retain all EI rows)
 df_merged = pd.merge(df_ei, df_temp, on="year", how="left")
 
@@ -37,3 +46,4 @@ df_merged.to_csv(output_path, index=False)
 
 print("Merged dataset shape:", df_merged.shape)
 print(df_merged[["country", "year", "global_temp_c"]].drop_duplicates().head())
+'''

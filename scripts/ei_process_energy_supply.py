@@ -4,13 +4,13 @@ from pathlib import Path
 # -----------------------------------------------------
 # File paths
 # -----------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parents[2]
+BASE_DIR = Path(__file__).resolve().parents[1]
 
 EI_FILE   = BASE_DIR / "data" / "raw" / "EI-Stats-Review-ALL-data.xlsx"
 POP_FILE  = BASE_DIR / "data" / "raw" / "population-long-run-with-projections.csv"
 GDP_FILE  = BASE_DIR / "data" / "raw" / "mpd2023_web.xlsx"
 
-OUTPUT_PATH = BASE_DIR / "data" / "processed" / "ei_energy_supply_owid_units.csv"
+OUTPUT_PATH = BASE_DIR / "data" / "processed" / "ei_energy_supply.csv"
 
 # -----------------------------------------------------
 # Load Primary Energy Consumption (EJ)
