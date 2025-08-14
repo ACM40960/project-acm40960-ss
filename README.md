@@ -69,10 +69,12 @@ project-acm40960-ss/
 
 ## Data Sources
 
-* **Temperature:** HadCRUT, NOAA, IPCC datasets.
-* **CO₂ Concentrations:** Mauna Loa Observatory, ice core reconstructions, Global Carbon Budget datasets.
-* **Arctic Sea Ice:** Copernicus Climate Data Store, NSIDC satellite observations (extent, area, thickness).
-* **Energy & Emissions:** IEA, National and global fossil fuel datasets.
+* **Temperature:** [Temperature](https://berkeleyearth.org/data/)
+* **CO₂ Concentrations, Energy & Emissions:** [Co2 Emissions & Energy](https://globalcarbonbudgetdata.org/latest-data.html)
+* **Arctic Sea Ice Single Levels:** [ERA5_single_levels](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview)
+* **Arctic Sea Ice thickness:** [arctic_ice_thickness](https://psc.apl.washington.edu/zhang/Global_seaice/data.html)
+* **Arctic Sea Ice Area:** [arctic_ice_area](https://search.dataone.org/view/doi%3A10.18739%2FA2CC0TV9V#urn%3Auuid%3A2dffb930-b993-4a58-8d5a-b432f4de45c3)
+
 
 ---
 
@@ -116,7 +118,12 @@ project-acm40960-ss/
    git clone https://github.com/ACM40960/project-acm40960-ss.git
    cd project-acm40960-ss
    ```
-2. Open Jupyter notebooks in the `scripts/` directory for analysis and modeling.
+2. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Open Jupyter notebooks in the `scripts/` directory for analysis and modeling.
 
 ---
 
@@ -126,3 +133,5 @@ project-acm40960-ss/
 2. Jarvis, A., & Forster, P. M. (2024). *Estimated human-induced warming...*, *Nature Geoscience*.
 3. Su, Z. (2022). *World CO₂ Emissions...*, *Highlights in Science, Engineering and Technology*.
 4. Zaatar, T., et al. (2025). *Arctic sea ice thickness prediction using ML*, *Annals of Operations Research*.
+
+---
