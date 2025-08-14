@@ -116,12 +116,7 @@ project-acm40960-ss/
    git clone https://github.com/ACM40960/project-acm40960-ss.git
    cd project-acm40960-ss
    ```
-2. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Open Jupyter notebooks in the `scripts/` directory for analysis and modeling.
+2. Open Jupyter notebooks in the `scripts/` directory for analysis and modeling.
 
 ---
 
