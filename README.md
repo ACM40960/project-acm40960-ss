@@ -20,6 +20,14 @@ Understanding these patterns is critical for anticipating environmental, economi
 
 ---
 
+## Authors
+
+- [@Sumukh Dulipet Sudhanva](https://github.com/Sumukh-ds)
+
+- [@Sathvik Gaurav Srinath](https://github.com/GS-Sathvik)
+
+---
+
 ## Project Structure
 
 ```
