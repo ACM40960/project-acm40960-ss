@@ -126,5 +126,3 @@ project-acm40960-ss/
 2. Jarvis, A., & Forster, P. M. (2024). *Estimated human-induced warming...*, *Nature Geoscience*.
 3. Su, Z. (2022). *World CO₂ Emissions...*, *Highlights in Science, Engineering and Technology*.
 4. Zaatar, T., et al. (2025). *Arctic sea ice thickness prediction using ML*, *Annals of Operations Research*.
-
----new changes!
