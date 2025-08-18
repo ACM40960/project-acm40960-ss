@@ -20,14 +20,6 @@ Understanding these patterns is critical for anticipating environmental, economi
 
 ---
 
-## Authors
-
-- [@Sumukh Dulipet Sudhanva](https://github.com/Sumukh-ds)
-
-- [@Sathvik Gaurav Srinath](https://github.com/GS-Sathvik)
-
----
-
 ## Project Structure
 
 ```
@@ -96,16 +88,16 @@ project-acm40960-ss/
 
 2. **Exploratory Analysis**
 
-   * Trend analysis of CO₂, global temperature, and Arctic sea ice.
-   * Statistical correlation and regression modeling.
+   * Trend analysis of CO₂, global temperature, and Arctic sea ice Decline.
+   * Statistical correlation with predictors.
    * Seasonal and annual breakdowns.
 
 3. **Modelling & Forecasting**
 
    * Regression models for CO₂–temperature relationships.
-   * Time-series models (ARIMA, Holt’s trend, SARIMAX).
-   * Machine learning models (SVR, LSTM) for Arctic ice forecasting.
-   * Projection of “ice-free” Arctic thresholds (<1 million km²).
+   * Time-series models (ARIMA, SARIMAX).
+   * Forecast of Co2 Emission from Major Emitting Countries using ARIMA
+   * Projection of “ice-free” Arctic thresholds using SARIMAX(<1 million km²).
 
 ---
 
@@ -143,3 +135,11 @@ project-acm40960-ss/
 4. Zaatar, T., et al. (2025). *Arctic sea ice thickness prediction using ML*, *Annals of Operations Research*.
 
 ---
+
+## Authors
+
+- [@Sumukh Dulipet Sudhanva](https://github.com/Sumukh-ds)  
+  📧 sumukhdsds@gmail.com | sumukh.dulipetsudhanva@ucdconnect.ie  
+
+- [@Sathvik Gaurav Srinath](https://github.com/GS-Sathvik)  
+  📧 sathviksgs@gmail.com | sathvik.gaurav@ucdconnect.ie  
