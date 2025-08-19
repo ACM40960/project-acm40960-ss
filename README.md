@@ -1,22 +1,136 @@
 # GLOBAL HEAT & POLAR RETREAT: TRACKING EMISSIONS, TEMPERATURES, AND ARCTIC CHANGE
 
+---
+
 ## Overview
-
-This project investigates the relationship between atmospheric CO₂ concentrations, global temperature rise, and Arctic sea ice decline. Using over 270 years of historical data, advanced statistical analysis, and machine learning forecasting models, the study aims to quantify human impact on the climate and project future Arctic ice conditions.
-
-The analysis covers:
-
-* Long-term trends in CO₂ emissions and global temperatures.
-* Statistical correlation and causality analysis.
-* Forecasting of Arctic sea ice extent, area, and thickness.
-* Scenario-based projections for an “ice-free” Arctic.
+Climate change is reshaping the planet at an unprecedented pace, with rising greenhouse gas emissions driving both global temperature increases and rapid Arctic decline. This project brings together over 270 years of emission records, historical temperature datasets, and detailed Arctic observations to uncover how human activity has altered Earth’s climate system. By analyzing global drivers and polar responses side by side, the study provides a clearer picture of cause-and-effect linkages between carbon emissions and environmental change. The integration of statistical methods with forecasting models highlights not just past trajectories but also the potential future states of the climate system. Together, these insights contribute to both scientific understanding and actionable knowledge for climate policy.
 
 ---
 
-## Motivation
+## Objective
+The objective of this research is to evaluate the extent to which carbon dioxide emissions influence global temperatures and Arctic sea ice conditions. Specifically, the project investigates the direct correlation between emissions and warming, while also assessing how these changes manifest in polar regions. A focus is placed on identifying key emission sources, such as major economies, fossil fuel use, and land-use change, to understand patterns of responsibility. Parallel to this, Arctic datasets are used to examine seasonal cycles, long-term decline, and climate drivers shaping ice loss. Forecasting models are then applied to estimate when the Arctic could reach “ice-free” conditions, defined as less than one million km² of summer sea ice. By combining these perspectives, the project provides a robust, data-driven foundation for understanding global warming and its polar consequences.
 
-The Arctic serves as a climate amplifier — warming faster than much of the globe and influencing global weather patterns. Rising CO₂ levels from fossil fuel use, industrial processes, and deforestation are driving temperature increases and accelerating ice loss.
-Understanding these patterns is critical for anticipating environmental, economic, and geopolitical consequences, and for shaping informed climate policy.
+---
+
+## Methodology
+
+### A) Dataset Sources
+
+* **Temperature:** [Temperature](https://berkeleyearth.org/data/)
+* **CO₂ Concentrations, Energy & Emissions:** [Co2 Emissions & Energy](https://globalcarbonbudgetdata.org/latest-data.html)
+* **Arctic Sea Ice Single Levels:** [ERA5_single_levels](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview)
+* **Arctic Sea Ice thickness:** [arctic_ice_thickness](https://psc.apl.washington.edu/zhang/Global_seaice/data.html)
+* **Arctic Sea Ice Area:** [arctic_ice_area](https://search.dataone.org/view/doi%3A10.18739%2FA2CC0TV9V#urn%3Auuid%3A2dffb930-b993-4a58-8d5a-b432f4de45c3)
+
+### B) Data Collection & Preprocessing
+
+To unify datasets of different formats and time scales, we designed a multi-stage pipeline:
+
+#### 1. Raw Data
+Raw data was stored in `data/raw/` and included:  
+- **Tabular files** (`.csv`, `.xlsx`, `.txt`) for global emissions, temperature, and energy supply.  
+- **NetCDF files** (`.nc`) for Arctic-specific variables including:  
+  - Sea ice area (SIA) and sea ice extent (SIE).  
+  - Sea ice thickness (PIOMAS).  
+  - ERA5 predictor variables (air temperature, sea surface temperature, skin temperature, snow, cloud cover, solar radiation, UV radiation, latent/sensible heat fluxes).  
+
+#### 2. Pre-Processing
+The raw datasets were transformed into structured, analysis-ready `.csv` files under `data/pre_processed/` using the notebooks in `scripts/pre_processing/`. Key steps:  
+
+- **CO₂ and Energy**  
+  - `co2_source.ipynb`: Cleaned and extracted CO₂ emissions by country, sector, and fuel type.  
+  - `ei_process_energy_supply.ipynb`: Processed global energy mix and supply datasets.  
+
+- **Global Temperature**  
+  - `global_temp.ipynb`: Standardized Berkeley Earth data into annual anomalies.  
+
+- **Arctic Sea Ice**  
+  - `arctic_area_extent.ipynb`: Converted NSIDC `.nc` records of sea ice area and extent into monthly/annual CSVs.  
+  - `arctic_thickness.ipynb`: Extracted PIOMAS thickness data from NetCDF into long-term timeseries.  
+  - `arctic_predictors.ipynb`: Processed ERA5 NetCDF datasets (temperature, SST, radiation, fluxes, snowfall, cloud cover) into predictor time series.  
+
+- **Merging**  
+  - `whole_data_merge.ipynb`: Merged CO₂, energy, and temperature into a global-scale dataset.  
+  - `arctic_final_merge.ipynb`: Combined sea ice metrics (area, extent, thickness) with predictor variables into a single Arctic dataset.  
+
+#### 3. Final Datasets
+Two key datasets were produced:  
+- **`final_arctic.csv`** → Comprehensive Arctic dataset (SIA, SIE, thickness, plus predictors like SST, fluxes, radiation, snow).  
+- **`whole_data_merged.csv`** → Integrated global dataset (CO₂, energy, and Global Temperature).  
+
+These final datasets allowed seamless exploratory analysis, correlation studies, and forecasting models. NetCDF processing ensured high-resolution Arctic climate data was aligned with long-term global records.
+
+### C) Analysis & Modelling
+
+#### Part 1 - CO₂ Emissions & Global Temperature
+Carbon dioxide has been the central anthropogenic driver of global warming since the Industrial Revolution. Its concentration in the atmosphere has grown alongside fossil fuel combustion, cement production, and land-use change. The relationship between CO₂ and global temperature is not only strong but also statistically robust, showing that human activity is the dominant force shaping Earth’s climate trajectory. To understand this fully, it is essential to examine how emissions have grown over time, which countries and fuels are most responsible, and how trade and land-use further complicate accountability.
+
+##### 1.1 CO₂-Temperature Link
+<div align="center">
+  <img src="readme_images/Co2 Emissions vs Global Temp with Uncertainty.png" width="95%">
+</div>  
+The tight correlation between atmospheric CO₂ and global temperature anomalies demonstrates the causal link at the core of climate change. Even with natural variability and uncertainty, the long-term pattern is clear: as CO₂ rises, so does temperature. The strongest accelerations in both series coincide with industrial expansion and increased fossil fuel dependency, confirming the anthropogenic signal.
+
+##### 1.2 Top Emitters Over Time
+<div align="center">
+  <img src="readme_images/Co2 Emissions Over Time by Top 5 Emitting Countries.png" width="95%">
+</div>  
+National trajectories show the changing geography of responsibility. China has become the largest emitter in the 21st century, overtaking the United States, whose emissions have plateaued but remain historically high. India’s rapid growth highlights the challenge of balancing development with sustainability, while Russia and Japan reflect more stable but persistent contributions.
+
+##### 1.3 Fuel Breakdown
+<div align="center">
+  <img src="readme_images/Global Co2 Emissions by Fuel Type.png" width="95%">
+</div>  
+Breaking emissions down by fuel type reveals the structural drivers of carbon growth. Coal continues to dominate, particularly in emerging economies, while oil and natural gas provide additional momentum. Cement and industrial processes add a smaller but steady share, underscoring that carbon is embedded not just in energy but also in infrastructure.
+
+##### 1.4 Trade-Adjusted Emissions
+<div align="center">
+  <img src="readme_images/Trade Adjusted Co2.png" width="95%">
+</div>  
+Production-based emissions underestimate the role of wealthy consumer economies. When adjusted for trade, developed regions such as Europe and North America import substantial amounts of “hidden” carbon through goods manufactured elsewhere. This highlights how carbon responsibility is globally interconnected, with production concentrated in exporters like China but consumption-driven elsewhere.
+
+##### 1.5 Land-Use Change
+<div align="center">
+  <img src="readme_images/luc_share_map.png" width="90%">
+</div>  
+While fossil fuels dominate globally, land-use change remains critical in certain regions. Deforestation, agriculture, and land conversion in South America and Africa account for a disproportionate share of emissions locally. Although smaller in the global total, land-use emissions highlight the importance of ecosystem management in climate mitigation strategies.
+
+#### Part 2 - Arctic Change: State, Drivers & Forecast
+The Arctic is one of the fastest-changing regions on the planet, warming nearly two times faster than the global average. Sea ice decline is among the most visible indicators, reshaping ecosystems, weather systems, and geopolitical dynamics. Observing Arctic change provides not only a regional narrative but also a planetary warning, as feedbacks from this region reverberate globally. To understand this process, we must compare Arctic and global warming, analyze ice trends and seasonality, identify key drivers, and forecast future trajectories.
+
+##### 2.1 Arctic Amplification vs Global
+<div align="center">
+  <img src="readme_images/Global vs Arctic Annual Temp Anomalies.png" width="95%">
+</div>  
+Arctic temperatures have diverged sharply from the global mean since the 1980s. This amplification stems from feedbacks such as albedo loss, where melting ice exposes darker surfaces that absorb more heat. The result is a self-reinforcing cycle of regional warming that not only accelerates ice loss but also alters atmospheric and oceanic circulation globally.
+
+##### 2.2 Yearly Ice Decline
+<div align="center">
+  <img src="readme_images/Yearly Avg Sea Ice Area.png" width="85%">
+</div>  
+Long-term sea ice records confirm a steep and accelerating decline in yearly averages. Breakpoints in 2007 and 2012 mark historic lows, reshaping the baseline of Arctic conditions. Each decade since the 1980s has been consistently lower than the last, underscoring the permanence of the trend.
+
+##### 2.3 Seasonal Cycle
+<div align="center">
+  <img src="readme_images/Average Sea Ice Area by Month.png" width="70%">
+</div>  
+Despite overall decline, the Arctic retains a clear seasonal rhythm. Ice reaches its maximum in late winter and its minimum in late summer, but the gap between the two has widened over time. The diminishing summer minima are particularly concerning, as they drive many of the feedback loops tied to Arctic amplification.
+
+##### 2.4 Climatic Drivers
+<div align="center">
+  <img src="readme_images/Correlation Heatmap with Arctic Vars.png" width="92%">
+</div>  
+Correlation analysis highlights the key variables influencing sea ice decline. Sea surface temperature shows the strongest negative relationship, followed by air and skin temperature. Variables like snowfall and cloud cover play lesser roles. Identifying these drivers provides the foundation for forecasting models that capture both physical mechanisms and statistical dependencies.
+
+##### 2.5 Forecasting with SARIMAX
+<div align="center">
+  <img src="readme_images/SARIMAX Arctic Forecast.png" width="95%">
+</div>  
+SARIMAX was selected to forecast Arctic sea ice because it captures both autoregressive patterns and strong seasonal cycles better than simple ARIMA models. Unlike machine learning models such as LSTM, SARIMAX is transparent, interpretable, and works well with limited historical data. The model projects that the Arctic could see its first ice-free summer in the 2042, marking a profound shift in the Earth system. This choice balances accuracy with interpretability, making the forecasts more useful for climate communication and policy.
+
+
+## Conclusion
+The analysis shows how rising CO₂ emissions, driven largely by fossil fuels and concentrated in major economies, are tightly linked to global warming. Trade and land-use change complicate simple national responsibility, emphasizing the global nature of carbon flows. In the Arctic, amplification has accelerated sea ice decline, reshaped seasonal cycles, and revealed strong linkages with key climate variables. Forecasting with SARIMAX underscores the likelihood of an ice-free summer in the mid-21st century, providing both a stark warning and a benchmark for action. Together, these findings connect human activity to polar change in a clear narrative, demonstrating the urgency of reducing emissions and preparing for the cascading consequences of a warming Arctic.
 
 ---
 
@@ -65,51 +179,6 @@ project-acm40960-ss/
 └── ...
 ```
 
----
-
-## Data Sources
-
-* **Temperature:** [Temperature](https://berkeleyearth.org/data/)
-* **CO₂ Concentrations, Energy & Emissions:** [Co2 Emissions & Energy](https://globalcarbonbudgetdata.org/latest-data.html)
-* **Arctic Sea Ice Single Levels:** [ERA5_single_levels](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview)
-* **Arctic Sea Ice thickness:** [arctic_ice_thickness](https://psc.apl.washington.edu/zhang/Global_seaice/data.html)
-* **Arctic Sea Ice Area:** [arctic_ice_area](https://search.dataone.org/view/doi%3A10.18739%2FA2CC0TV9V#urn%3Auuid%3A2dffb930-b993-4a58-8d5a-b432f4de45c3)
-
-
----
-
-## Methodology
-
-1. **Data Preprocessing**
-
-   * Merging multiple climate datasets (temperature, CO₂, energy, sea ice).
-   * Cleaning and interpolating missing values.
-   * Converting raw formats into structured CSVs for analysis.
-
-2. **Exploratory Analysis**
-
-   * Trend analysis of CO₂, global temperature, and Arctic sea ice Decline.
-   * Statistical correlation with predictors.
-   * Seasonal and annual breakdowns.
-
-3. **Modelling & Forecasting**
-
-   * Regression models for CO₂–temperature relationships.
-   * Time-series models (ARIMA, SARIMAX).
-   * Forecast of Co2 Emission from Major Emitting Countries using ARIMA
-   * Projection of “ice-free” Arctic thresholds using SARIMAX(<1 million km²).
-
----
-
-## Expected Outcomes
-
-* Quantitative validation of CO₂–temperature correlation.
-* Informative visualizations with uncertainty bands and trend lines.
-* Forecasts estimating the year of seasonal Arctic ice-free conditions.
-* Data-driven insights to inform climate change mitigation policies.
-
----
-
 ## Installation & Usage
 
 1. Clone this repository:
@@ -127,12 +196,15 @@ project-acm40960-ss/
 
 ---
 
-## References
+## References  
 
-1. Intergovernmental Panel on Climate Change (IPCC). (2021). *Climate Change 2021: The Physical Science Basis*.
-2. Jarvis, A., & Forster, P. M. (2024). *Estimated human-induced warming...*, *Nature Geoscience*.
-3. Su, Z. (2022). *World CO₂ Emissions...*, *Highlights in Science, Engineering and Technology*.
-4. Zaatar, T., et al. (2025). *Arctic sea ice thickness prediction using ML*, *Annals of Operations Research*.
+1. Intergovernmental Panel on Climate Change (IPCC). (2021). *Climate Change 2021: The Physical Science Basis*. Chapter 3: Human Influence on the Climate System. In *The Sixth Assessment Report of the Intergovernmental Panel on Climate Change*. Cambridge University Press. [Link](https://www.ipcc.ch/report/ar6/wg1/)  
+
+2. Jarvis, A., & Forster, P. M. (2024). *Estimated human-induced warming from a linear temperature and atmospheric CO₂ relationship*. *Nature Geoscience, 17*, 1222–1224. [https://doi.org/10.1038/s41561-024-01580-5](https://doi.org/10.1038/s41561-024-01580-5)  
+
+3. Su, Z. (2022). *World CO₂ Emissions: Simple Analysis and its Relationship with Global Temperature Change*. *Highlights in Science, Engineering and Technology, 25*, 21–36. [https://doi.org/10.54097/hset.v25i.3415](https://doi.org/10.54097/hset.v25i.3415)  
+
+4. Zaatar, T., Cheaitou, A., Faury, O., & Rigot-Muller, P. (2025). *Arctic sea ice thickness prediction using machine learning: a long short-term memory model*. *Annals of Operations Research, 345*, 533–568. [https://doi.org/10.1007/s10479-024-06457-9](https://doi.org/10.1007/s10479-024-06457-9)  
 
 ---
 
