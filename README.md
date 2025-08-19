@@ -204,7 +204,7 @@ project-acm40960-ss/
 
 3. Su, Z. (2022). *World CO₂ Emissions: Simple Analysis and its Relationship with Global Temperature Change*. *Highlights in Science, Engineering and Technology, 25*, 21–36. [https://doi.org/10.54097/hset.v25i.3415](https://doi.org/10.54097/hset.v25i.3415)  
 
-4. Zaatar, T., Cheaitou, A., Faury, O., & Rigot-Muller, P. (2025). *Arctic sea ice thickness prediction using machine learning: a long short-term memory model*. *Annals of Operations Research, 345*, 533–568. [https://doi.org/10.1007/s10479-024-06457-9](https://doi.org/10.1007/s10479-024-06457-9)  
+4. *ERA5 monthly averaged data on single levels from 1940 to present*. Copernicus Climate Change Service (C3S) Climate Data Store (CDS). [https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview)
 
 ---
 
