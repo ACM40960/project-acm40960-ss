@@ -134,6 +134,18 @@ The analysis shows how rising CO₂ emissions, driven largely by fossil fuels an
 
 ---
 
+## Future Scope  
+
+This project establishes clear links between CO₂ emissions, global warming, and Arctic sea ice decline. Future work could extend these insights in several directions:  
+
+- **Broader Greenhouse Gas Coverage**: Expand analysis to include methane (CH₄) and nitrous oxide (N₂O), which also contribute significantly to radiative forcing.  
+- **Higher-Resolution Arctic Forecasting**: Apply deep learning models (e.g., LSTM, Transformers) alongside SARIMAX to capture nonlinear dynamics in sea ice variability.  
+- **Coupled Climate Indicators**: Integrate ocean circulation indices (e.g., AMOC, ENSO, NAO) to better understand teleconnections influencing Arctic change.  
+- **Scenario-Based Simulations**: Model emissions and Arctic ice loss under different policy pathways (e.g., IPCC Shared Socioeconomic Pathways).  
+- **Interactive Dashboards**: Build a visualization platform for policymakers and the public to explore emissions, temperature anomalies, and Arctic forecasts interactively.  
+
+---
+
 ## Project Structure
 
 ```
