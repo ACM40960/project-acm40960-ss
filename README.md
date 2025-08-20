@@ -234,10 +234,12 @@ All datasets remain under their respective licenses and must be used in accordan
 
 ---
 
-## Authors
+## Authors  
 
 - [@Sumukh Dulipet Sudhanva](https://github.com/SUMUKHDS)  
   📧 sumukhdsds@gmail.com | sumukh.dulipetsudhanva@ucdconnect.ie  
+  🔗 [LinkedIn](https://www.linkedin.com/in/sumukh-d-s/)  
 
 - [@Sathvik Gaurav Srinath](https://github.com/GS-Sathvik)  
   📧 sathviksgs@gmail.com | sathvik.gaurav@ucdconnect.ie  
+  🔗 [LinkedIn](https://www.linkedin.com/in/sathvikgs/)  
