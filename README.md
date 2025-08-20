@@ -55,8 +55,8 @@ The raw datasets were transformed into structured, analysis-ready `.csv` files u
 
 #### 3. Final Datasets
 Two key datasets were produced:  
-- **`final_arctic.csv`** → Comprehensive Arctic dataset (SIA, SIE, thickness, plus predictors like SST, fluxes, radiation, snow).  
-- **`whole_data_merged.csv`** → Integrated global dataset (CO₂, energy, and Global Temperature).  
+- **`final_arctic.csv`** - Comprehensive Arctic dataset (SIA, SIE, thickness, plus predictors like SST, fluxes, radiation, snow).  
+- **`whole_data_merged.csv`** - Integrated global dataset (CO₂, energy, and Global Temperature).  
 
 These final datasets allowed seamless exploratory analysis, correlation studies, and forecasting models. NetCDF processing ensured high-resolution Arctic climate data was aligned with long-term global records.
 
@@ -210,13 +210,13 @@ project-acm40960-ss/
 
 ## References  
 
-1. Intergovernmental Panel on Climate Change (IPCC). (2021). *Climate Change 2021: The Physical Science Basis*. Chapter 3: Human Influence on the Climate System. In *The Sixth Assessment Report of the Intergovernmental Panel on Climate Change*. Cambridge University Press. [Link](https://www.ipcc.ch/report/ar6/wg1/)  
+1. [Intergovernmental Panel on Climate Change (IPCC). (2021). *Climate Change 2021: The Physical Science Basis*. Chapter 3: Human Influence on the Climate System. In *The Sixth Assessment Report of the Intergovernmental Panel on Climate Change*. Cambridge University Press.](https://www.ipcc.ch/report/ar6/wg1/)  
 
-2. Jarvis, A., & Forster, P. M. (2024). *Estimated human-induced warming from a linear temperature and atmospheric CO₂ relationship*. *Nature Geoscience, 17*, 1222–1224. [https://doi.org/10.1038/s41561-024-01580-5](https://doi.org/10.1038/s41561-024-01580-5)  
+2. Jarvis, A., & Forster, P. M. (2024). [*Estimated human-induced warming from a linear temperature and atmospheric CO₂ relationship*. *Nature Geoscience, 17*, 1222–1224.](https://doi.org/10.1038/s41561-024-01580-5)  
 
-3. Su, Z. (2022). *World CO₂ Emissions: Simple Analysis and its Relationship with Global Temperature Change*. *Highlights in Science, Engineering and Technology, 25*, 21–36. [https://doi.org/10.54097/hset.v25i.3415](https://doi.org/10.54097/hset.v25i.3415)  
+3. Su, Z. (2022). [*World CO₂ Emissions: Simple Analysis and its Relationship with Global Temperature Change*. *Highlights in Science, Engineering and Technology, 25*, 21–36.](https://doi.org/10.54097/hset.v25i.3415)  
 
-4. *ERA5 monthly averaged data on single levels from 1940 to present*. Copernicus Climate Change Service (C3S) Climate Data Store (CDS). [https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview)
+4. *ERA5 monthly averaged data on single levels from 1940 to present*. [Copernicus Climate Change Service (C3S) Climate Data Store (CDS).] (https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview)
 
 ---
 
