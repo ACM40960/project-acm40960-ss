@@ -210,7 +210,7 @@ project-acm40960-ss/
 
 ## References  
 
-1. [Intergovernmental Panel on Climate Change (IPCC). (2021). *Climate Change 2021: The Physical Science Basis*. Chapter 3: Human Influence on the Climate System. In *The Sixth Assessment Report of the Intergovernmental Panel on Climate Change*. Cambridge University Press.](https://www.ipcc.ch/report/ar6/wg1/)  
+1. Intergovernmental Panel on Climate Change (IPCC). (2021). *Climate Change 2021: The Physical Science Basis*. Chapter 3: Human Influence on the Climate System. In *The Sixth Assessment Report of the Intergovernmental Panel on Climate Change*. [Cambridge University Press.](https://www.ipcc.ch/report/ar6/wg1/)  
 
 2. Jarvis, A., & Forster, P. M. (2024). [*Estimated human-induced warming from a linear temperature and atmospheric CO₂ relationship*. *Nature Geoscience, 17*, 1222–1224.](https://doi.org/10.1038/s41561-024-01580-5)  
 
