@@ -208,6 +208,20 @@ project-acm40960-ss/
 
 ---
 
+## License  
+
+This project is released under a **Custom Modified Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0) License with Additional Restriction**.  
+
+- Academic and research use is permitted with proper credit to the authors.  
+- Commercial use or redistribution outside of academic/research purposes requires explicit written permission.  
+- For full details, see the [LICENSE.txt](./LICENSE.txt) file.  
+
+### Dataset Licensing  
+This repository uses publicly available datasets from Berkeley Earth, Global Carbon Budget, Copernicus ERA5, PIOMAS, and NSIDC.  
+All datasets remain under their respective licenses and must be used in accordance with their original terms. Attribution to the original data providers is required.  
+
+---
+
 ## References  
 
 1. Intergovernmental Panel on Climate Change (IPCC). (2021). *Climate Change 2021: The Physical Science Basis*. Chapter 3: Human Influence on the Climate System. In *The Sixth Assessment Report of the Intergovernmental Panel on Climate Change*. [Cambridge University Press.](https://www.ipcc.ch/report/ar6/wg1/)  
