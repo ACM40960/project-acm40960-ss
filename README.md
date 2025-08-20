@@ -216,7 +216,7 @@ project-acm40960-ss/
 
 3. Su, Z. (2022). [*World CO₂ Emissions: Simple Analysis and its Relationship with Global Temperature Change*. *Highlights in Science, Engineering and Technology, 25*, 21–36.](https://doi.org/10.54097/hset.v25i.3415)  
 
-4. *ERA5 monthly averaged data on single levels from 1940 to present*. [Copernicus Climate Change Service (C3S) Climate Data Store (CDS).] (https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview)
+4. *ERA5 monthly averaged data on single levels from 1940 to present*. [Copernicus Climate Change Service (C3S) Climate Data Store (CDS).](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview)
 
 ---
 
