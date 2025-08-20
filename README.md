@@ -8,6 +8,21 @@
 
 ---
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Objective](#objective)
+- [Methodology](#methodology)
+- [Conclusion](#conclusion)
+- [Future Scope](#future-scope)
+- [Project Structure](#project-structure)
+- [Installation & Usage](#installation--usage)
+- [License](#license)
+- [References](#references)
+- [Authors](#authors)
+
+---
+
 ## Overview
 
 Climate change is reshaping the planet at an unprecedented pace, with rising greenhouse gas emissions driving both global temperature increases and rapid Arctic decline. This project brings together over 270 years of emission records, historical temperature datasets, and detailed Arctic observations to uncover how human activity has altered Earth’s climate system. By analyzing global drivers and polar responses side by side, the study provides a clearer picture of cause-and-effect linkages between carbon emissions and environmental change. The integration of statistical methods with forecasting models highlights not just past trajectories but also the potential future states of the climate system. Together, these insights contribute to both scientific understanding and actionable knowledge for climate policy.
