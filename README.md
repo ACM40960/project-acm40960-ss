@@ -236,7 +236,7 @@ All datasets remain under their respective licenses and must be used in accordan
 
 ## Authors
 
-- [@Sumukh Dulipet Sudhanva](https://github.com/Sumukh-ds)  
+- [@Sumukh Dulipet Sudhanva](https://github.com/SUMUKHDS)  
   📧 sumukhdsds@gmail.com | sumukh.dulipetsudhanva@ucdconnect.ie  
 
 - [@Sathvik Gaurav Srinath](https://github.com/GS-Sathvik)  
