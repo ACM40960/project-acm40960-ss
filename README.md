@@ -286,6 +286,6 @@ All datasets remain under their respective licenses and must be used in accordan
   📧 sumukhdsds@gmail.com | sumukh.dulipetsudhanva@ucdconnect.ie  
   🔗 [LinkedIn](https://www.linkedin.com/in/sumukh-d-s/)
 
-- [@Sathvik Gaurav Srinath](https://github.com/GS-Sathvik)  
+- [@Sathvik Gaurav Srinath](https://github.com/sathvikgs)  
   📧 sathviksgs@gmail.com | sathvik.gaurav@ucdconnect.ie  
   🔗 [LinkedIn](https://www.linkedin.com/in/sathvikgs/)
